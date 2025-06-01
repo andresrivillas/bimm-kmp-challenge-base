@@ -14,14 +14,14 @@ class ShopListViewViewModel: ObservableObject {
     @Published var shops: [Shop] = []
     @Published var selectedShop: IdentifiableShop?
     
-    init() {
-        self.repository = SakeShopModule.shared.createShopRepository()
+    init(repository: SakeShopRepository = SakeShopModule.shared.createShopRepository()) {
+        self.repository = repository
     }
     
     func loadData() {
         repository.getShopList(){[weak self] result, error in
             guard let self = self else { return }
-            shops = result?.value as! [Shop]
+            shops = result?.value as? [Shop] ?? []
         }
     }
 }
