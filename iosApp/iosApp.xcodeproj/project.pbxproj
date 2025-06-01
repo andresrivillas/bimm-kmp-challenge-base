@@ -6,17 +6,36 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		DC800EB32DEBEC4A00E3CB16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9DA97A92DC1472C00A4DA20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9DA97B02DC1472C00A4DA20;
+			remoteInfo = iosApp;
+		};
+		DC800EC12DEBEC7600E3CB16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9DA97A92DC1472C00A4DA20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9DA97B02DC1472C00A4DA20;
+			remoteInfo = iosApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B9DA97B12DC1472C00A4DA20 /* KMP Take Home Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KMP Take Home Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC800EAD2DEBEC4A00E3CB16 /* KMP Take Home AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KMP Take Home AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC800EBD2DEBEC7600E3CB16 /* Unit test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit test.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B99700CA2DC9B8D800C7335B /* Exceptions for "iosApp" folder in "iosApp" target */ = {
+		B99700CA2DC9B8D800C7335B /* Exceptions for "iosApp" folder in "SakeShop" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = B9DA97B02DC1472C00A4DA20 /* iosApp */;
+			target = B9DA97B02DC1472C00A4DA20 /* SakeShop */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -24,7 +43,7 @@
 		B9DA97B32DC1472C00A4DA20 /* iosApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				B99700CA2DC9B8D800C7335B /* Exceptions for "iosApp" folder in "iosApp" target */,
+				B99700CA2DC9B8D800C7335B /* Exceptions for "iosApp" folder in "SakeShop" target */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -34,10 +53,29 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		DC800EAE2DEBEC4A00E3CB16 /* KMP Take Home AssignmentTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "KMP Take Home AssignmentTests";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B9DA97AE2DC1472C00A4DA20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC800EAA2DEBEC4A00E3CB16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC800EBA2DEBEC7600E3CB16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,6 +90,7 @@
 			children = (
 				B9DA98002DC14AA900A4DA20 /* Configuration */,
 				B9DA97B32DC1472C00A4DA20 /* iosApp */,
+				DC800EAE2DEBEC4A00E3CB16 /* KMP Take Home AssignmentTests */,
 				B9DA97B22DC1472C00A4DA20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				B9DA97B12DC1472C00A4DA20 /* KMP Take Home Assignment.app */,
+				DC800EAD2DEBEC4A00E3CB16 /* KMP Take Home AssignmentTests.xctest */,
+				DC800EBD2DEBEC7600E3CB16 /* Unit test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9DA97B02DC1472C00A4DA20 /* iosApp */ = {
+		B9DA97B02DC1472C00A4DA20 /* SakeShop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9DA97BF2DC1472D00A4DA20 /* Build configuration list for PBXNativeTarget "iosApp" */;
+			buildConfigurationList = B9DA97BF2DC1472D00A4DA20 /* Build configuration list for PBXNativeTarget "SakeShop" */;
 			buildPhases = (
 				B9DA97F42DC1497100A4DA20 /* Compile Kotlin Framework */,
 				B9DA97AD2DC1472C00A4DA20 /* Sources */,
@@ -83,12 +124,55 @@
 			fileSystemSynchronizedGroups = (
 				B9DA97B32DC1472C00A4DA20 /* iosApp */,
 			);
-			name = iosApp;
+			name = SakeShop;
 			packageProductDependencies = (
 			);
 			productName = iosApp;
 			productReference = B9DA97B12DC1472C00A4DA20 /* KMP Take Home Assignment.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DC800EAC2DEBEC4A00E3CB16 /* KMP Take Home AssignmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC800EB52DEBEC4A00E3CB16 /* Build configuration list for PBXNativeTarget "KMP Take Home AssignmentTests" */;
+			buildPhases = (
+				DC800EA92DEBEC4A00E3CB16 /* Sources */,
+				DC800EAA2DEBEC4A00E3CB16 /* Frameworks */,
+				DC800EAB2DEBEC4A00E3CB16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC800EB42DEBEC4A00E3CB16 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC800EAE2DEBEC4A00E3CB16 /* KMP Take Home AssignmentTests */,
+			);
+			name = "KMP Take Home AssignmentTests";
+			packageProductDependencies = (
+			);
+			productName = "KMP Take Home AssignmentTests";
+			productReference = DC800EAD2DEBEC4A00E3CB16 /* KMP Take Home AssignmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		DC800EBC2DEBEC7600E3CB16 /* Unit test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC800EC32DEBEC7600E3CB16 /* Build configuration list for PBXNativeTarget "Unit test" */;
+			buildPhases = (
+				DC800EB92DEBEC7600E3CB16 /* Sources */,
+				DC800EBA2DEBEC7600E3CB16 /* Frameworks */,
+				DC800EBB2DEBEC7600E3CB16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC800EC22DEBEC7600E3CB16 /* PBXTargetDependency */,
+			);
+			name = "Unit test";
+			packageProductDependencies = (
+			);
+			productName = "Unit test";
+			productReference = DC800EBD2DEBEC7600E3CB16 /* Unit test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,11 +181,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					B9DA97B02DC1472C00A4DA20 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					DC800EAC2DEBEC4A00E3CB16 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = B9DA97B02DC1472C00A4DA20;
+					};
+					DC800EBC2DEBEC7600E3CB16 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = B9DA97B02DC1472C00A4DA20;
 					};
 				};
 			};
@@ -119,13 +211,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9DA97B02DC1472C00A4DA20 /* iosApp */,
+				B9DA97B02DC1472C00A4DA20 /* SakeShop */,
+				DC800EAC2DEBEC4A00E3CB16 /* KMP Take Home AssignmentTests */,
+				DC800EBC2DEBEC7600E3CB16 /* Unit test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B9DA97AF2DC1472C00A4DA20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC800EAB2DEBEC4A00E3CB16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC800EBB2DEBEC7600E3CB16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,7 +272,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC800EA92DEBEC4A00E3CB16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC800EB92DEBEC7600E3CB16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC800EB42DEBEC4A00E3CB16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9DA97B02DC1472C00A4DA20 /* SakeShop */;
+			targetProxy = DC800EB32DEBEC4A00E3CB16 /* PBXContainerItemProxy */;
+		};
+		DC800EC22DEBEC7600E3CB16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9DA97B02DC1472C00A4DA20 /* SakeShop */;
+			targetProxy = DC800EC12DEBEC7600E3CB16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B9DA97BD2DC1472D00A4DA20 /* Debug */ = {
@@ -354,6 +489,80 @@
 			};
 			name = Release;
 		};
+		DC800EB62DEBEC4A00E3CB16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andresRivillas.KMP-Take-Home-AssignmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iosApp;
+			};
+			name = Debug;
+		};
+		DC800EB72DEBEC4A00E3CB16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andresRivillas.KMP-Take-Home-AssignmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iosApp;
+			};
+			name = Release;
+		};
+		DC800EC42DEBEC7600E3CB16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andresRivillas.Unit-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMP Take Home Assignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KMP Take Home Assignment";
+			};
+			name = Debug;
+		};
+		DC800EC52DEBEC7600E3CB16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andresRivillas.Unit-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMP Take Home Assignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KMP Take Home Assignment";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -366,11 +575,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9DA97BF2DC1472D00A4DA20 /* Build configuration list for PBXNativeTarget "iosApp" */ = {
+		B9DA97BF2DC1472D00A4DA20 /* Build configuration list for PBXNativeTarget "SakeShop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9DA97C02DC1472D00A4DA20 /* Debug */,
 				B9DA97C12DC1472D00A4DA20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC800EB52DEBEC4A00E3CB16 /* Build configuration list for PBXNativeTarget "KMP Take Home AssignmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC800EB62DEBEC4A00E3CB16 /* Debug */,
+				DC800EB72DEBEC4A00E3CB16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC800EC32DEBEC7600E3CB16 /* Build configuration list for PBXNativeTarget "Unit test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC800EC42DEBEC7600E3CB16 /* Debug */,
+				DC800EC52DEBEC7600E3CB16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
