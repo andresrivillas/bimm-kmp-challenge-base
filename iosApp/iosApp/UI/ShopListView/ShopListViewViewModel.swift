@@ -19,9 +19,19 @@ class ShopListViewViewModel: ObservableObject {
     }
     
     func loadData() {
-        repository.getShopList(){[weak self] result, error in
+        repository.getShopList() { [weak self] result, error in
             guard let self = self else { return }
-            shops = result?.value as? [Shop] ?? []
+            
+            if let error = error {
+                self.shops = []
+                return
+            }
+            
+            if let shopList = result?.value as? [Shop] {
+                self.shops = shopList
+            } else {
+                self.shops = []
+            }
         }
     }
 }

@@ -35,7 +35,7 @@ import java.util.UUID
 
 @Preview
 @Composable
-fun App(viewModel: MainScreenViewModel = koinViewModel()) {
+fun ShopListScreen(viewModel: ShopListViewModel = koinViewModel()) {
 
     LaunchedEffect(Unit) {
         viewModel.loadData()

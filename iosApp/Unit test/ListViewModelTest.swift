@@ -30,6 +30,11 @@ final class ListViewModelTest: XCTestCase {
         cancellables = nil
     }
     
+    func testInitialState() {
+        XCTAssertTrue(viewModel.shops.isEmpty)
+        XCTAssertNil(viewModel.selectedShop)
+    }
+    
     func testLoadData_ShouldUpdateShops() {
         shopRepository.shopList = ResponseBase<NSMutableArray>(value: [data], errors: nil, success: true)
         
@@ -39,4 +44,51 @@ final class ListViewModelTest: XCTestCase {
         XCTAssertNil(viewModel.selectedShop)
         XCTAssertEqual(1, shopRepository.serviceCalledTimes)
     }
+    
+    func testLoadData_whenServiceReturnsError_setsErrorMessage() {
+        shopRepository.shopList = ResponseBase<NSMutableArray>(value: nil, errors: "Error", success: false)
+        let expectation = XCTestExpectation(description: "Load with service error")
+        viewModel.loadData()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            XCTAssertTrue(self.viewModel.shops.isEmpty)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 1.0)
+    }
+    
+    func testLoadData_withNilResult_setsEmptyShops() {
+        shopRepository.shopList = ResponseBase<NSMutableArray>(value: nil, errors: nil, success: false)
+        let expectation = XCTestExpectation(description: "Load shop data")
+        viewModel.loadData()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            XCTAssertTrue(self.viewModel.shops.isEmpty)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 1.0)
+    }
+    
+    func testSelectShop_setsSelectedShop() {
+        let shop = IdentifiableShop(shop: data)
+        
+        viewModel.selectedShop = shop
+        XCTAssertEqual(viewModel.selectedShop?.shop.name, "test")
+    }
+    
+    func testLoadData_withEmptyResult_setsEmptyShops() {
+        shopRepository.shopList = ResponseBase<NSMutableArray>(value: [], errors: nil, success: true)
+        let expectation = XCTestExpectation(description: "Load shop data")
+        viewModel.loadData()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            XCTAssertTrue(self.viewModel.shops.isEmpty)
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 1.0)
+    }
+
 }

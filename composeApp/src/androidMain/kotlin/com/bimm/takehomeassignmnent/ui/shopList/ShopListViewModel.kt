@@ -10,7 +10,7 @@ import com.bimm.takehomeassignmnent.domain.model.Shop
 import kotlinx.coroutines.launch
 
 
-class MainScreenViewModel(private val shopRepository: SakeShopRepository) : ViewModel() {
+class ShopListViewModel(private val shopRepository: SakeShopRepository) : ViewModel() {
 
     var shops by mutableStateOf<List<Shop>>(emptyList())
         private set
@@ -19,14 +19,11 @@ class MainScreenViewModel(private val shopRepository: SakeShopRepository) : View
 
     fun loadData() = viewModelScope.launch {
         val result = shopRepository.getShopList()
-        shops = result.value!!
+        shops = if (result.success && result.value != null) {
+            result.value!!
+        } else {
+            emptyList()
+        }
     }
 
-    fun selectShop(shop: Shop) {
-        selectedShop = shop
-    }
-
-    fun clearSelectedShop() {
-        selectedShop = null
-    }
 }

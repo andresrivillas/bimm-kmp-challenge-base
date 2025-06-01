@@ -63,7 +63,7 @@ fun ShopDetailBottomSheet(shop: Shop, onDismiss: () -> Unit) {
             ImageView(imageUrl = shop.picture ?: "", Modifier.fillMaxWidth())
             Text(shop.name.orEmpty(), style = MaterialTheme.typography.headlineSmall)
             Text(
-                shop.address.orEmpty(),
+                shop.description.orEmpty(),
                 style = MaterialTheme.typography.bodySmall,
                 color = Color.Gray
             )

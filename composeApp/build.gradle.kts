@@ -29,6 +29,8 @@ kotlin {
             implementation(libs.ktor.client.okhttp)
             implementation(libs.coil.compose)
             implementation(libs.material.icons.extended)
+
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -49,6 +51,13 @@ kotlin {
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+            implementation(libs.junit)
+            implementation(libs.mockito.kotlin)
+            implementation(libs.mockito.core)
+            implementation(libs.kotlinx.coroutines.test)
+            implementation(libs.androidx.junit.ktx)
+            implementation(libs.androidx.core.ktx)
+            implementation(libs.robolectric)
         }
     }
 }
@@ -63,6 +72,8 @@ android {
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
         versionName = "1.0"
+        testFunctionalTest = false
+        testHandleProfiling = false
     }
     packaging {
         resources {
