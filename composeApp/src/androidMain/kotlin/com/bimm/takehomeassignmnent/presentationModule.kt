@@ -1,8 +1,15 @@
 package com.bimm.takehomeassignmnent
 
-import org.koin.core.module.dsl.viewModelOf
+import com.bimm.takehomeassignmnent.di.SakeShopModule
+import com.bimm.takehomeassignmnent.domain.interfaces.repository.SakeShopRepository
+import com.bimm.takehomeassignmnent.ui.shopList.MainScreenViewModel
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 val presentationModule = module {
-    viewModelOf(::MainScreenViewModel)
+    single<SakeShopRepository> { SakeShopModule.createShopRepository() }
+
+    viewModel {
+        MainScreenViewModel(get())
+    }
 }

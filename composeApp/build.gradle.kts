@@ -27,6 +27,8 @@ kotlin {
             implementation(libs.koin.androidx.compose)
 
             implementation(libs.ktor.client.okhttp)
+            implementation(libs.coil.compose)
+            implementation(libs.material.icons.extended)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -79,6 +81,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.volley)
     debugImplementation(compose.uiTooling)
 }
 

@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.bimm.takehomeassignmnent.App
+import com.bimm.takehomeassignmnent.ui.shopList.App
 import com.bimm.takehomeassignmnent.initKoin
 import org.koin.android.ext.koin.androidContext
 
