@@ -1,34 +1,42 @@
-# Bimm KMP Take Home Assignment - Base repo
+Mobile Developer Challenge (iOS & Android)
 
-IMPORTANT: Don't create a PR to this repo with your solution.
+This project is a cross-platform mobile application developed as a technical challenge, demonstrating the use of Kotlin Multiplatform (KMP) for sharing business logic and models across iOS and Android.
 
-# Assignment instructions
-You should have received a separate description for your assignment. If you haven't, please contact the member of the hiring team you're in touch with.
+📱 Platforms
 
-Also please verify you have received any files (JSON, xml, csv, txt, images, depending on the assignment) or any API addresses you assignment mentions. Those vary with the position you're applying to.
+iOS: Built with Swift and SwiftUI.
+Android: Built with Kotlin and Jetpack Compose.
+🔗 Shared Code
 
+The data layer is shared across platforms using Kotlin Multiplatform and includes:
 
-# Assignment deliver instructions
-[Fork](https://github.com/reul/bimm-kmp-challenge-base/fork) or clone this repo and add the necessary code to complete your assignment, then email us with the link of the forked repo or to a zip or tarball file we can download and evaluate.
+Data Transfer Objects (DTOs)
+Repository logic
+JSON parsing and service simulation
+🧪 Testing
 
-It's very important that we can run the project and see it being executed ourselves, so don't make it dependent on any private repos or environment variables we might not have access to or, if you must, include an APK in the tarball or in a GitHub release in your fork. Don't forget to include or stage any other dependencies (like json files).
+Each ViewModel is tested using its native platform technology:
+Swift (XCTest) for iOS ViewModels
+Kotlin (JUnit) for Android ViewModels
+This allows better integration with platform-specific tools and IDE features.
 
-## Build instructions
-This is a Kotlin Multiplatform project targeting Android, iOS.
+📦 JSON Handling
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+Instead of using real network calls, the app reads a local JSON string to simulate API responses.
+DTOs are structured to support error handling, though error logic is not implemented for simplicity.
+📐 Architecture Overview
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+KMP Shared Module contains reusable business logic and models.
+Native UI Layers manage navigation, presentation, and rendering using their respective technologies.
+🚧 Known Simplifications
 
-* `/shared` is for the code that will be shared between all targets in the project.
-  The most important subfolder is `commonMain`. If preferred, you can add code to the platform-specific folders here too.
+DTOs include error structures, but error handling is not active.
+The service reads JSON from local strings to avoid external dependencies and keep the setup lightweight.
+🚀 Purpose
 
+This project demonstrates:
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
-
+Clean architecture with separation of concerns
+Efficient use of Kotlin Multiplatform
+Native development best practices for iOS and Android
+Testable, modular code structure

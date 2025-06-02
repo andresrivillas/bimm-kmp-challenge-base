@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.bimm.takehomeassignmnent.ui.shopList.ShopListScreen
-import com.bimm.takehomeassignmnent.initKoin
+import com.bimm.takehomeassignmnent.di.initKoin
 import org.koin.android.ext.koin.androidContext
 
 class MainActivity : ComponentActivity() {

@@ -1,6 +1,5 @@
-package com.bimm.takehomeassignmnent
+package com.bimm.takehomeassignmnent.di
 
-import com.bimm.takehomeassignmnent.di.SakeShopModule
 import com.bimm.takehomeassignmnent.domain.interfaces.repository.SakeShopRepository
 import com.bimm.takehomeassignmnent.ui.shopList.ShopListViewModel
 import org.koin.core.module.dsl.viewModel
