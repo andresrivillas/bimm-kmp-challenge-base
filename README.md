@@ -4,11 +4,11 @@ This project is a cross-platform mobile application developed as a technical cha
 
 ## 📱 Platforms
 - iOS: Built with Swift and SwiftUI
-![App Screenshot](https://imgur.com/9Vc0sHk)
-![App Screenshot](https://imgur.com/jn1SXAp)
+![App Screenshot](https://imgur.com/9Vc0sHk.jpg)
+![App Screenshot](https://imgur.com/jn1SXAp.jpg)
 - Android: Built with Kotlin and Jetpack Compose
-![App Screenshot](https://imgur.com/aerI5oX)
-![App Screenshot](https://imgur.com/3YQYYR5)
+![App Screenshot](https://imgur.com/aerI5oX.jpg)
+![App Screenshot](https://imgur.com/3YQYYR5.jpg)
 
 ## 🏗 Architecture
 The project follows the Model-View-ViewModel (MVVM) architecture on both platforms:
