@@ -1,42 +1,44 @@
-Mobile Developer Challenge (iOS & Android)
+# Mobile Developer Challenge (iOS & Android)
 
 This project is a cross-platform mobile application developed as a technical challenge, demonstrating the use of Kotlin Multiplatform (KMP) for sharing business logic and models across iOS and Android.
 
-📱 Platforms
+## 📱 Platforms
+- iOS: Built with Swift and SwiftUI
+![App Screenshot](https://imgur.com/9Vc0sHk)
+![App Screenshot](https://imgur.com/jn1SXAp)
+- Android: Built with Kotlin and Jetpack Compose
+![App Screenshot](https://imgur.com/aerI5oX)
+![App Screenshot](https://imgur.com/3YQYYR5)
 
-iOS: Built with Swift and SwiftUI.
-Android: Built with Kotlin and Jetpack Compose.
-🔗 Shared Code
+## 🏗 Architecture
+The project follows the Model-View-ViewModel (MVVM) architecture on both platforms:
+- Model: Shared via Kotlin Multiplatform
+- ViewModel: Platform-specific, using native tools and patterns
+- View: Native SwiftUI (iOS) and Jetpack Compose (Android)
 
+## 🔗 Shared Code
 The data layer is shared across platforms using Kotlin Multiplatform and includes:
+- Data Transfer Objects (DTOs)
+- Repository and use case logic
+- Service that parses JSON responses
 
-Data Transfer Objects (DTOs)
-Repository logic
-JSON parsing and service simulation
-🧪 Testing
-
+## 🧪 Testing
 Each ViewModel is tested using its native platform technology:
-Swift (XCTest) for iOS ViewModels
-Kotlin (JUnit) for Android ViewModels
-This allows better integration with platform-specific tools and IDE features.
+- ✅ XCTest for Swift ViewModels (iOS)
+- ✅ JUnit for Kotlin ViewModels (Android)
+This ensures platform-specific quality and integration while maintaining shared business logic.
 
-📦 JSON Handling
+## 📦 JSON Handling
+- A local JSON string is used to simulate API responses instead of real network calls.
+- DTOs are structured to support error handling, though error logic is not implemented for simplicity.
 
-Instead of using real network calls, the app reads a local JSON string to simulate API responses.
-DTOs are structured to support error handling, though error logic is not implemented for simplicity.
-📐 Architecture Overview
+## 🚧 Known Simplifications
+- DTOs include error fields, but no error-handling logic is used.
+- JSON responses are hardcoded to avoid unnecessary complexity or setup.
 
-KMP Shared Module contains reusable business logic and models.
-Native UI Layers manage navigation, presentation, and rendering using their respective technologies.
-🚧 Known Simplifications
-
-DTOs include error structures, but error handling is not active.
-The service reads JSON from local strings to avoid external dependencies and keep the setup lightweight.
-🚀 Purpose
-
-This project demonstrates:
-
-Clean architecture with separation of concerns
-Efficient use of Kotlin Multiplatform
-Native development best practices for iOS and Android
-Testable, modular code structure
+## 🚀 Purpose
+This project was built to demonstrate:
+- Cross-platform development using Kotlin Multiplatform
+- Native UI development best practices on iOS and Android
+- Clean code organization using MVVM
+- Modular and testable architecture
